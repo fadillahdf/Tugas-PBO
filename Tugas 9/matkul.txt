@@ -1,0 +1,52 @@
+Microsoft Windows [Version 10.0.19045.3693]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Asus>cd C:\xampp\mysql\bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 124
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use kampusumc;
+Database changed
+MariaDB [kampusumc]> show tables;
++---------------------+
+| Tables_in_kampusumc |
++---------------------+
+| matakuliah          |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [kampusumc]> select * from matakuliah;
++----+--------+-------------------------------------+-----+
+| id | kodemk | namamk                              | sks |
++----+--------+-------------------------------------+-----+
+|  0 |        | kalkukus                            | 2   |
+|  0 |        | aik 2                               | 2   |
+|  0 |        | komunikasi data                     | 2   |
+|  0 |        | statistik dan probabilitas          | 2   |
+|  0 |        | arsitektur dan organisasi komputer  | 3   |
+|  0 |        | pemograman                          | 3   |
+|  0 |        | struktur data dan algoritma         | 3   |
+|  0 |        | sistem informasi                    | 3   |
++----+--------+-------------------------------------+-----+
+8 rows in set (0.001 sec)
+
+MariaDB [kampusumc]> select * from matakuliah where sks='3';
++----+--------+-------------------------------------+-----+
+| id | kodemk | namamk                              | sks |
++----+--------+-------------------------------------+-----+
+|  0 |        | arsitektur dan organisasi komputer  | 3   |
+|  0 |        | pemograman                          | 3   |
+|  0 |        | struktur data dan algoritma         | 3   |
+|  0 |        | sistem informasi                    | 3   |
++----+--------+-------------------------------------+-----+
+4 rows in set (0.001 sec)
+
+MariaDB [kampusumc]>
